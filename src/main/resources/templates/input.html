@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Processors - Input Page</title>
+</head>
+<body>
+<h1>Processors - Input Page</h1>
+<form action="#" th:action="@{/submit}" method="post">
+  <label>Processor Name:</label>
+  <input type="text" name="processorName" required>
+
+  <br><br>
+
+  <label>Manufacturer:</label>
+  <input type="radio" name="manufacturer" value="Intel" checked> Intel
+  <input type="radio" name="manufacturer" value="AMD"> AMD
+  <input type="radio" name="manufacturer" value="Apple"> Apple
+
+  <br><br>
+
+  <label>Windows 11 Ready:</label>
+  <input type="checkbox" name="windows11Ready">
+
+  <br><br>
+
+  <input type="submit" value="Submit">
+</form>
+<footer>Sheridan College - Muskan Muskan</footer>
+</body>
+</html>

@@ -4,32 +4,30 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/")
 public class ProcessorController {
-
-    @GetMapping
+    @GetMapping("/input")
     public String showInputPage() {
         return "input";
     }
 
     @PostMapping("/submit")
-    public String processForm(
+    public String processInput(
             @RequestParam("processorName") String processorName,
-            @RequestParam(value = "manufacturer", defaultValue = "Intel") String manufacturer,
-            @RequestParam(value = "windows11Ready", required = false, defaultValue = "false") boolean windows11Ready,
-            Model model
-    ) {
+            @RequestParam("manufacturer") String manufacturer,
+            @RequestParam(value = "windows11Ready", required = false) boolean windows11Ready,
+            Model model) {
         if (processorName.isEmpty()) {
-            model.addAttribute("error", "Processor Name is required.");
+            model.addAttribute("error", "Processor Name cannot be empty!");
             return "input";
         }
 
         model.addAttribute("processorName", processorName);
         model.addAttribute("manufacturer", manufacturer);
         model.addAttribute("windows11Ready", windows11Ready);
+
         return "output";
     }
 }
