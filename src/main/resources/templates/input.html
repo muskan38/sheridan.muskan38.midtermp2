@@ -4,28 +4,28 @@
   <meta charset="UTF-8">
   <title>Processors - Input Page</title>
 </head>
-<body>
-<h1>Processors - Input Page</h1>
-<form action="#" th:action="@{/submit}" method="post">
-  <label>Processor Name:</label>
-  <input type="text" name="processorName" required>
+<body style="font-family: Arial, sans-serif; background-color: #f5f5f5; margin: 20px;">
+<h1 style="color: #333;">Processors - Input Page</h1>
+<form action="#" th:action="@{/submit}" method="post" style="background-color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+  <label style="display: block; margin-top: 10px;">Processor Name:</label>
+  <input type="text" name="processorName" required style="margin-top: 5px;">
 
   <br><br>
 
-  <label>Manufacturer:</label>
-  <input type="radio" name="manufacturer" value="Intel" checked> Intel
-  <input type="radio" name="manufacturer" value="AMD"> AMD
-  <input type="radio" name="manufacturer" value="Apple"> Apple
+  <label style="display: block; margin-top: 10px;">Manufacturer:</label>
+  <input type="radio" name="manufacturer" value="Intel" checked style="margin-top: 5px;"> Intel
+  <input type="radio" name="manufacturer" value="AMD" style="margin-top: 5px;"> AMD
+  <input type="radio" name="manufacturer" value="Apple" style="margin-top: 5px;"> Apple
 
   <br><br>
 
-  <label>Windows 11 Ready:</label>
-  <input type="checkbox" name="windows11Ready">
+  <label style="display: block; margin-top: 10px;">Windows 11 Ready:</label>
+  <input type="checkbox" name="windows11Ready" style="margin-top: 5px;">
 
   <br><br>
 
-  <input type="submit" value="Submit">
+  <input type="submit" value="Submit" style="background-color: #a84caf; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
 </form>
-<footer>Sheridan College - Muskan Muskan</footer>
+<footer style="margin-top: 20px; text-align: center; color: #666;">Sheridan College - Muskan Muskan</footer>
 </body>
 </html>
