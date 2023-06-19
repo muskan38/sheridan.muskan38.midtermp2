@@ -1,0 +1,31 @@
+<!-- input.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Processors - Input Page</title>
+</head>
+<body>
+<h1>Processors - Input Page</h1>
+
+<form action="#" th:action="@{/submit}" method="post">
+    <label for="processorName">Processor Name:</label>
+    <input type="text" id="processorName" name="processorName" required/><br/>
+
+    <label>Manufacturer:</label>
+    <input type="radio" id="manufacturer-intel" name="manufacturer" value="Intel" checked/>
+    <label for="manufacturer-intel">Intel</label>
+
+    <input type="radio" id="manufacturer-amd" name="manufacturer" value="AMD"/>
+    <label for="manufacturer-amd">AMD</label>
+
+    <input type="radio" id="manufacturer-apple" name="manufacturer" value="Apple"/>
+    <label for="manufacturer-apple">Apple</label><br/>
+
+    <label for="windows11Ready">Windows 11 Ready:</label>
+    <input type="checkbox" id="windows11Ready" name="windows11Ready"/><br/>
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!-- output.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Processors - Output Page</title>
+</head>
+<body>
+<h1>Processors - Output Page</h1>
+
+<p>Processor Name: <span th:text="${processorName}"></span></p>
+<p>Manufacturer: <span th:text="${manufacturer}"></span></p>
+<p>Windows 11 Ready: <span th:text="${windows11Ready} ? 'Yes' : 'No'}"></span></p>
+
+<form action="#" th:action="@{/}" method="get">
+  <button type="submit">Back</button>
+</form>
+</body>
+</html>
